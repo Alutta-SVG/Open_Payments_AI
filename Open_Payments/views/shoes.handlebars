@@ -1,0 +1,48 @@
+
+ <br>
+    <div class="container">
+           <form action="/shoes/filter" method="GET">
+        <label for="brandname">Brand:</label>
+        <select name="brandname" id="brandname">
+            <option value="">All Brands</option>
+                <option value="Steve Madden">Steve Madden</option>
+                <option value="Louis Vuitton">Louis Vuitton</option>
+                <option value="Farfetch">Farfetch</option>
+                <option value="SSENSE">SSENSE</option>
+        </select>
+        
+        <label for="size">Size:</label>
+        <select name="size" id="size">
+            <option value="">All Sizes</option>
+                <option value="3">Size 3</option>
+                <option value="4">Size 4</option>
+                <option value="5">Size 5</option>
+                <option value="6">Size 6</option>
+        </select>
+        
+        <button type="submit">Filter</button>
+    </form>
+    <br>
+    <div class="row">
+        {{#each shoes.data}}
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="{{image_url}}" class="card-img-top" alt="{{shoe_name}}"
+                        style="height: 150px; width: 150px; margin-left: 15px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{brand_name}}</h5>
+                        <span class="card-text">{{shoe_name}}</span>
+                        <p class="card-text"> R{{price}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
+
+
+
