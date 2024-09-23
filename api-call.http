@@ -1,0 +1,18 @@
+#get all shoes
+
+GET http://localhost:3007/api/shoes
+
+#get shoes by brand
+GET http://localhost:3007/api/shoes/brand/:Louis Vuitton
+
+#get shoes by size
+GET http://localhost:3007/api/shoes/size/:size
+
+#get shoes by brand and size
+GET http://localhost:3007/api/shoes/brand/:brandname/size/:size
+
+#get updated sold shoes
+POST http://localhost:3007/api/shoes/sold/:id
+
+#insert shoes
+POST http://localhost:3007/api/shoes
